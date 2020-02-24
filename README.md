@@ -22,7 +22,7 @@ http://localhost:19001/
 You should be able to see a GUI application in which you can execute your SQL++ queries.
 
 ## Analyse Chicago Crimes dataset 
-* In this demo, we use Chicago Crimes dataset, which you can download from [UCR STAR](https://star.cs.ucr.edu/?Chicago%20Crimes#center=39.373,-89.606&zoom=7).
+* In this demo, we use Chicago Crimes dataset, which you can download from [UCR STAR](https://star.cs.ucr.edu/?Chicago%20Crimes#center=41.8376,-87.6322&zoom=11).
 Please choose the full download.
 * For your convenience, we downloaded a subset of the dataset and put it at ./data directory.
 
