@@ -75,7 +75,7 @@ CREATE DATASET ChicagoCrimes (ChicagoCrimeType) PRIMARY KEY id;
 ```sql
 USE chicago_crimes;
 
-LOAD DATASET ChicagoCrimes USING localfs (("path"="127.0.0.1:///home/tvu032/Documents/source_code/asterixdb_demo/crime.csv"), ("format"="delimited-text"), ("delimiter"="\t"), ("header"="true"));
+LOAD DATASET ChicagoCrimes USING localfs (("path"="127.0.0.1:///home/tvu032/Documents/source_code/asterixdb_demo/data/crime.csv"), ("format"="delimited-text"), ("delimiter"="\t"), ("header"="true"));
 ```
 
 ## Data analytics using SQL++
