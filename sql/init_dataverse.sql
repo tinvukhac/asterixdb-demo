@@ -6,8 +6,8 @@ USE chicago_crimes;
 -- Make Chicago crime data type
 
 CREATE TYPE ChicagoCrimeType as closed {
-    latitude: double?,
     longitude: double?,
+    latitude: double?,
     id: int32,
     case_number: string?,
     date_value: string?,
@@ -34,4 +34,4 @@ CREATE TYPE ChicagoCrimeType as closed {
 CREATE DATASET ChicagoCrimes (ChicagoCrimeType) PRIMARY KEY id;
 
 -- Load csv data into dataset
-LOAD DATASET ChicagoCrimes USING localfs (("path"="127.0.0.1:///home/tvu032/Documents/source_code/asterixdb_demo/crime.csv"), ("format"="delimited-text"), ("delimiter"="\t"), ("header"="true"));
+LOAD DATASET ChicagoCrimes USING localfs (("path"="127.0.0.1:///Users/tinvu/OneDrive/Desktop/asterix-server-0.9.4.1-binary-assembly/datasets/chicago_crimes_sample.csv"), ("format"="delimited-text"), ("delimiter"="\t"), ("header"="true"));

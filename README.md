@@ -39,8 +39,8 @@ CREATE DATAVERSE chicago_crimes;
 USE chicago_crimes;
 
 CREATE TYPE ChicagoCrimeType as closed {
-    latitude: double?,
     longitude: double?,
+    latitude: double?,
     id: int32,
     case_number: string?,
     date_value: string?,
@@ -96,17 +96,24 @@ SELECT COUNT(arrest) FROM ChicagoCrimes WHERE arrest="true";
 SELECT DISTINCT(primary_type) FROM ChicagoCrimes WHERE location_description="GAS STATION";
 ```
 
-* **Problem 4**: 
+* **Problem 4**: Find a rough number of crimes near the Chicago's downtown.
 ```sql
-
+SELECT COUNT(*) FROM ChicagoCrimes as cc 
+WHERE spatial_intersect(create_point(cc.latitude, cc.longitude), create_circle(create_point(41.8362,-87.6665), 0.15));
 ```
 
-* **Problem 5**: 
+* **Problem 5**: Find the number of crimes by year.
+<!---
 ```sql
-
+SELECT year, COUNT(*) AS crimes FROM ChicagoCrimes as cc 
+GROUP BY cc.year ORDER BY cc.year;
 ```
+-->
 
-* **Problem 6**: 
+* **Problem 6**: Which district is the most dangerous?
+<!---
 ```sql
-
+SELECT district, COUNT(*) AS crimes FROM ChicagoCrimes AS cc 
+GROUP BY cc.district ORDER BY crimes;
 ```
+-->
