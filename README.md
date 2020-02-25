@@ -80,3 +80,33 @@ LOAD DATASET ChicagoCrimes USING localfs (("path"="127.0.0.1:///Users/tinvu/OneD
 ```
 
 ## Data analytics using SQL++
+
+* **Problem 1**: Find the total number of crimes recorded in the ChicagoCrimes dataset
+```sql
+SELECT COUNT(*) FROM ChicagoCrimes;
+```
+
+* **Problem 2**: How many crimes involve an arrest?
+```sql
+SELECT COUNT(arrest) FROM ChicagoCrimes WHERE arrest="true"; 
+```
+
+* **Problem 3**: Which unique types of crimes have been recorded at GAS STATION locations?
+```sql
+SELECT DISTINCT(primary_type) FROM ChicagoCrimes WHERE location_description="GAS STATION";
+```
+
+* **Problem 4**: 
+```sql
+
+```
+
+* **Problem 5**: 
+```sql
+
+```
+
+* **Problem 6**: 
+```sql
+
+```
