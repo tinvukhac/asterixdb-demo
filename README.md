@@ -2,11 +2,12 @@
 A demonstration of data analytics using AsterixDB
 
 ## Environmental set up
-* This tutorial assumes that you have a Linux, MacOS or Windows machine.
-* Download AsterixDB 0.9.4.1 from https://asterixdb.apache.org/ . 
+* Download AsterixDB 0.9.4.1 from https://asterixdb.apache.org/ .
+* Unzip the downloaded file. 
+If you are using Windows, move to opt/local/bin/ , double click on start-sample-cluster.bat 
+* For Linux or MacOS users: 
 Save the downloaded file at your home directory (/home/user_name, in my case: /home/tvu032).
-Unzip the downloaded file.
-* Move to the unzipped directory: 
+* User the terminal, move to the unzipped directory: 
 ```console
 foo@bar: cd /home/tvu032/asterix-server-0.9.4.1-binary-assembly
 ```
@@ -75,7 +76,7 @@ CREATE DATASET ChicagoCrimes (ChicagoCrimeType) PRIMARY KEY id;
 ```sql
 USE chicago_crimes;
 
-LOAD DATASET ChicagoCrimes USING localfs (("path"="127.0.0.1:///home/tvu032/Documents/source_code/asterixdb_demo/data/crime.csv"), ("format"="delimited-text"), ("delimiter"="\t"), ("header"="true"));
+LOAD DATASET ChicagoCrimes USING localfs (("path"="127.0.0.1:///Users/tinvu/OneDrive/Desktop/asterix-server-0.9.4.1-binary-assembly/datasets/chicago_crimes_sample.csv"), ("format"="delimited-text"), ("delimiter"="\t"), ("header"="true"));
 ```
 
 ## Data analytics using SQL++
