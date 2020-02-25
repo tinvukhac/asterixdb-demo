@@ -2,6 +2,7 @@
 A demonstration of data analytics using AsterixDB
 
 ## Environmental set up
+* Download and install [Java SE Runtime Environment 8 ](https://www.oracle.com/java/technologies/javase-jre8-downloads.html).
 * Download AsterixDB 0.9.4.1 from https://asterixdb.apache.org/ .
 * Unzip the downloaded file. 
 If you are using Windows, move to opt/local/bin/ , double click on start-sample-cluster.bat 
@@ -26,6 +27,7 @@ You should be able to see a GUI application in which you can execute your SQL++ 
 * In this demo, we use Chicago Crimes dataset, which you can download from [UCR STAR](https://star.cs.ucr.edu/?Chicago%20Crimes#center=41.8376,-87.6322&zoom=11).
 Please choose the full download.
 * For your convenience, we downloaded a subset of the dataset and put it at ./data directory.
+If your browser opens the file instead of downloading it, please download the zip file and unzip it afterward.
 
 ### Create data scheme
 * Back to the AsterixDB GUI at http://localhost:19001/ , execute the following SQL++ query to create the dataverse of Chicago Crimes dataset.
